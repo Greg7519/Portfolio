@@ -217,6 +217,7 @@ body{
     right: 0;
 }
 .spacer100vh{
+    margin: 0;
     height: 100vh;
 }
 .split{
@@ -300,7 +301,7 @@ body{
     opacity: 0;
 }
 .bgImg{
-    background-image: url(../assets/images/nebrion.png);
+    background-image: url(../assets/images/chat.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(4px);
@@ -340,9 +341,36 @@ body{
     margin: 0;
     height: 10vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+  
     background-color: #171717;
 }
 .show{
     transition: all 1s;
     opacity: 1;
+}
+.footerLinks{
+    justify-content: end;
+    position: relative;
+    margin: 20 20 0 20;
+    color: white; 
+    float: right;
+}
+@property --fill{
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+.footerLinks:hover{
+    color: greenyellow;
+    --fill:100%;
+}
+.footerLinks::after{
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: -3px;
+    border-radius: inherit;
+    background: conic-gradient(greenyellow var(--fill), transparent var(--fill));
 }
