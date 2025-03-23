@@ -111,7 +111,7 @@
 @media only screen and (max-width:400px) {
     #startOfPage{
         
-        background-image: url(../assets/images/earth.jpg);
+        background-image: url(/assets/images/earth.jpg);
        
       
         
@@ -120,7 +120,7 @@
 @media only screen and (min-width:401px) {
     #startOfPage{
         
-        background-image: url(../assets/images/earth-big.jpg);
+        background-image: url(/assets/images/earth-big.jpg);
        
     }
 }
@@ -301,7 +301,7 @@ body{
     opacity: 0;
 }
 .bgImg{
-    background-image: url(../assets/images/chat.jpg);
+    background-image: url(/assets//images/chat.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(4px);
