@@ -335,9 +335,9 @@ body{
     .respSpacer{
         height: 100dvh;
     }
-    .spacer100vh{
-        height: 110vh;
-    }
+     .spacer100vh{
+        height: 100dvh;
+     }
     .blurAnim{
         backdrop-filter: blur(0px);
     }
