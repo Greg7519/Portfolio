@@ -328,15 +328,19 @@ body{
    
     .split{
         width: 100%;
+        margin-bottom: 0;
     }
     .bgImg{
         width: 100%;
+        margin-bottom: 0;
     }
     .respSpacer{
         height: 100dvh;
+        margin-bottom: 0;
     }
      .spacer100vh{
         height: 100dvh;
+        margin-bottom: 0;
      }
     .blurAnim{
         backdrop-filter: blur(0px);
