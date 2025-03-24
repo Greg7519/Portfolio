@@ -339,7 +339,7 @@ body{
         margin-bottom: 0;
     }
      .spacer100vh{
-        height: 100lvh;
+        min-height: -webkit-fill-available;
         margin-bottom: 0;
      }
     .blurAnim{
