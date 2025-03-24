@@ -335,11 +335,11 @@ body{
         margin-bottom: 0;
     }
     .respSpacer{
-        height: 100dvh;
+        height: 100%;
         margin-bottom: 0;
     }
      .spacer100vh{
-        height: 100dvh;
+        height: 100%;
         margin-bottom: 0;
      }
     .blurAnim{
