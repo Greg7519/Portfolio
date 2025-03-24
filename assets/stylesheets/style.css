@@ -335,6 +335,9 @@ body{
     .respSpacer{
         height: 100vh;
     }
+    .blurAnim{
+        backdrop-filter: blur(0px);
+    }
     
 }
 .footer{
