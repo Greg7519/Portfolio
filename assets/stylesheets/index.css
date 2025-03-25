@@ -9,8 +9,16 @@
 
 
 }
+.preloader{
+    width: 100%; 
+    background-color: white;
+    height: 100%;
+    z-index: 9999; 
+    position: absolute;
+}
 body{
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 .headerCont{
     display: flex;
@@ -179,9 +187,22 @@ body{
     color:rgb(255, 251, 251);
 
 }
+.footerLinksCont{
+    color:white; 
+    font-size: 20px; 
+    width: 100vw;
+}
+.footerIcon{
+    margin-right: 40px; 
+    color: rgb(255, 255, 255);
+}
+.orange{
+    background-color: rgb(255, 98, 0);
+}
 .visitBtn{
     display: inline-block;
     border-radius: 4px;
+    filter: blur(0);
     background-color: #007bff;
     border: none;
     z-index: 2;
@@ -357,6 +378,9 @@ body{
         backdrop-filter: blur(0px);
     }
     
+}
+.projSubheader{
+    color: white;
 }
 .footer{
     margin: 0;

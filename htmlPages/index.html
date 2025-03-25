@@ -7,13 +7,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/stylesheets/index.css">
     <script src="https://kit.fontawesome.com/7ca439eefa.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="/assets/scripts/onScroll.js"></script>
     <script defer src="/assets/scripts/hideBlur.js"></script>
     <script defer src="/assets/scripts/animBlur.js"></script>
+  
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body >
-    
+    <div class="preloader">
+
+    </div>
     <div id="startOfPage" >
         <div class="blurDiv" id="startBlur"></div> 
         <div class="navbarTop" >
@@ -52,9 +56,9 @@
     <div class="split Left  gray ">
         
         <div class="centered">
-            <h1 style="color: white;" class="projHeader hidden">Nebrion:The simple chat app</h1>
+            <h1 class="projHeader hidden">Nebrion:The simple chat app</h1>
             <div class="spacer20per"></div>
-            <h2 style="color: white;" class="projSubeader hidden">Chat with your loved ones</h2>
+            <h2 class="projSubheader hidden">Chat with your loved ones</h2>
         </div>
     </div>
     <div class="respSpacer"></div>
@@ -62,7 +66,7 @@
         <div class="bgImg"></div>
         <div class="blurAnim blurCont" ></div>
         
-        <div class="centered"  style="filter: blur(0);">
+        <div class="centered">
             <a class="visitBtn hidden"  href = "https://nebrion.netlify.app/">
                 <span>Click to visit</span>
             </a>
@@ -71,19 +75,19 @@
     <div class="spacer100vh"></div>
     <div class="split Right orange">
         <div class="centered">
-            <h1 style="color: white;" class="projHeader hidden">Chart generator</h1>
+            <h1  class="projHeader hidden">Chart generator</h1>
             <div class="spacer20per"></div>
-            <h2 style="color: white;" class="projSubeader hidden">Creating charts made easy</h2>
+            <h2  class="projSubheader hidden">Creating charts made easy</h2>
         </div>
     </div>
     <div class="respSpacer"></div>
-    <div class="split Left" style="padding: 0; overflow: hidden;">
+    <div class="split Left">
         
         
-        <div class="bgImg" style="background-image: url(/assets/images/business.jpg); margin: 0;"></div>
+        <div class="bgImg" style="background-image: url(/assets/images/business.jpg);"></div>
         <div class="blurAnim blurCont" ></div>
-        <div class="centered"  style="filter: blur(0);">
-            <a class="visitBtn hidden" style="background-color: rgb(255, 98, 0);"  href = "https://chartgeneratorfree.netlify.app/">
+        <div class="centered">
+            <a class="visitBtn orange hidden" href = "https://chartgeneratorfree.netlify.app/">
                 <span>Click to visit</span>
             </a>
         
@@ -91,16 +95,16 @@
     </div>
     <div class="spacer100vh"></div>
     <div class="footer">
-        <div style=" color:white; font-size: 20px; width: 100vw;">
+        <div class= "footerLinksCont">
                 
                 <a href="https://github.com/Greg7519?tab=repositories" class="footerLinks">
-                    <i class="fa fa-github " style="margin-right: 40px; color: rgb(255, 255, 255)"></i>
+                    <i class="fa fa-github footerIcon" ></i>
                 </a>
             
         </div>
     </div>
 
-   
+    <script defer src="/assets/scripts/preloader.js"></script>
     
 </body>
 </html>
