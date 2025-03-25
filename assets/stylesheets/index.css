@@ -9,6 +9,9 @@
 
 
 }
+body{
+    width: 100vw;
+}
 .headerCont{
     display: flex;
     justify-content: center;
@@ -327,21 +330,25 @@ body{
 @media screen and (max-width:1280px){
    
     .split{
-        width: 100%;
+        width: 100vw;
         margin-bottom: 0;
     }
     .bgImg{
-        width: 100%;
+        width: 100vw;
+        height: 110vh;
         margin-bottom: 0;
+    }
+    .Left{
+        height: 110vh;
+    }
+    .Right{
+        height: 110vh;
     }
     .respSpacer{
-        height: 100lvh;
+        height: 100vh;
         margin-bottom: 0;
     }
-     .spacer100vh{
-        min-height: -webkit-fill-available;
-        margin-bottom: 0;
-     }
+     
     .blurAnim{
         backdrop-filter: blur(0px);
     }
