@@ -345,8 +345,12 @@ body{
         height: 110vh;
     }
     .respSpacer{
-        height: 100vh;
+        height: 110vh;
         margin-bottom: 0;
+    }
+    /* because mobile height not workng properly */
+    .spacer100vh{
+        height: 110vh;
     }
      
     .blurAnim{
