@@ -17,5 +17,8 @@ const hiddenEls = document.querySelectorAll(
     '.hidden'
 )
 hiddenEls.forEach((el)=>{
-    observer.observe(el);
+    setTimeout(()=>{
+        observer.observe(el);
+    },1000)
+   
 })

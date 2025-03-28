@@ -9,16 +9,59 @@
 
 
 }
+
 .preloader{
     width: 100%; 
-    background-color: white;
+    background-color: rgb(21, 21, 21);
     height: 100%;
-    z-index: 9999; 
     position: absolute;
+    scroll-behavior: none;
+    z-index: 9999; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.preloaderHeader{
+    color: white;
+}
+
+.columnCont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.preloaderImg{
+    stroke: rgb(255, 255, 255);
+    stroke-width: 3px;
+    fill-opacity: 0;
+    overflow: hidden;
+    stroke-dasharray: 4500;
+    animation: draw 4s ease infinite;
+    width: 50%;
+    height: 25%;
+   
+}
+@keyframes draw{
+    0%{
+        stroke-dashoffset: 4500;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 body{
     height: 100%;
-    width: 100%;
+    width: 100vw;
+    overflow-x: scroll;
 }
 .headerCont{
     display: flex;
@@ -37,6 +80,14 @@ body{
 }
 .fade{
     opacity: 1;
+    transition: all 1s;
+}
+.goUp{
+    transition: all 1s;
+    transform: translateY(-100%);
+}
+.fadeOut{
+    opacity: 0;
     transition: all 1s;
 }
 #startOfPage{
@@ -335,8 +386,9 @@ body{
     background-position: center;
     right: 0;
     z-index: 1;
-   
-    
+}
+.chartGenImg{
+    background-image: url(/assets/images/business.jpg);
 }
 .dropdown-content a:hover{
     

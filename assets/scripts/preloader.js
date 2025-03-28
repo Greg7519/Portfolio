@@ -1,14 +1,17 @@
+document.body.style.overflowY = 'hidden';
+window.onload = function(){
+        setTimeout(()=>{
+                this.document.getElementsByClassName("preloader")[0].classList.add(
+                        "goUp"
+                );
+                document.body.style.overflowY = 'visible';
+                setTimeout(()=>{
+                        this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                },1000)
 
-const bgImgs = document.querySelectorAll(".bgImg");
-var len = bgImgs.length;
-var bgImgsArr = Array.from(bgImgs);
-var waitLen =0;
-for(var bgImg of bgImgsArr){
-
-        waitLen++;
+        },1000)
+       
+     
     
-    if(waitLen == len){
-        const preloader =document.getElementsByClassName("preloader");
-        preloader[0].style.display = "none";
-    }
+   
 }
