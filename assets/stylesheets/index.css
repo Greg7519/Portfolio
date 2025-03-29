@@ -426,6 +426,9 @@ body{
         height: 110vh;
         margin-bottom: 0;
     }
+    .bgImgWave{
+        width: 100vw;
+    }
     .Left{
         height: 110vh;
     }
