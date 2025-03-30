@@ -2,6 +2,7 @@ body,html{
     width: 100%;
     height: 100%;
     margin: 0;
+
 }
 .logoCont.centerRow{
     overflow: hidden;
@@ -17,6 +18,11 @@ body,html{
    
     /* background-color: rgb(255, 255, 255); */
 }
+.gregImg{
+    width: 50vw;
+    position: relative;
+    height: 100vh;
+}
 .logoText{
     width: 50vw;
     position: absolute;
@@ -30,10 +36,6 @@ body,html{
 .textBg{
     width: 50vw;
     position: relative;
-    background-image: url(/assets/images/aboutbg.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     height: 100vh;
 }
 .logoContImg{
@@ -44,13 +46,44 @@ body,html{
 }
 .logoImg{
     border-radius: 50%; 
-    height: 50vh;
-    width:auto;
+    height: auto;
+    width:20vw;
     position: absolute;
     right: 0;
     top:50%;
     left:50%;
+  
     transform: translate(-50%,-50%);
+    
+}
+@media screen and (max-width:1280px){
+    .logoCont.centerRow{
+        flex-direction: column;
+        height: 200vh;
+        overflow: hidden;
+        justify-content: flex-start;
+        align-items: center;
+       
+    
+    }
+    .gregImg {
+        margin-top: 20%;
+        display: flex;
+        justify-content: flex-start;
+        height: 50vh;
+        overflow: hidden;
+    }
+    .logoImg{
+        width: 50vw;
+        height: auto;
+    }
+    .logoText{
+
+        font-size: medium;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+    }
     
 }
 /* .logoBgCol{
