@@ -5,7 +5,6 @@ body,html{
 
 }
 .logoCont.centerRow{
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -28,6 +27,7 @@ body,html{
     position: absolute;
     text-align: center;
     color:"white";
+    font-size:1vw;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -44,6 +44,9 @@ body,html{
     /* color: rgb(0, 170, 255); */
     position: relative;
 }
+.orangeGrad{
+    background-image:linear-gradient(to right, rgb(255, 136, 0), rgb(233, 85, 0)) ;
+}
 .logoImg{
     border-radius: 50%; 
     height: auto;
@@ -52,19 +55,27 @@ body,html{
     right: 0;
     top:50%;
     left:50%;
-  
+    
     transform: translate(-50%,-50%);
     
 }
+.bgImgAbout{
+    background-image: url(/assets/images/wave-haikeiabout.svg); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
 @media screen and (max-width:1280px){
+    .bgImgAbout{
+        background-image: url(/assets/images/wave-haikeiabout2.svg); 
+    }
     .logoCont.centerRow{
         flex-direction: column;
         height: 200vh;
         overflow: hidden;
         justify-content: flex-start;
         align-items: center;
-       
-    
+        
     }
     .gregImg {
         margin-top: 20%;
