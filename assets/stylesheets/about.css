@@ -22,7 +22,42 @@ body,html{
     position: relative;
     height: 100vh;
 }
+
+/* @keyframes typing{
+    from{width:0}
+    to{width:100%;}
+}
+@keyframes blink-caret{
+    from, to{border-color: transparent;}
+    50%{border-color: orange;}
+} */
+
+/* @keyframes cursor {
+    to{
+        border-left: 2px solid  #ff7f50;
+    }
+}
+@keyframes words{
+    0%,32%{
+        content: "passionate";
+    }
+    33%,65%{
+        content: "about";
+    }
+    66%,100%{
+        content: "technology";
+    }
+}
+@keyframes typing {
+    10%,15%,30%, 35%, 50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+} */
 .logoText{
+    font-family: Anton, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 2px;
     width: 50vw;
     position: absolute;
     text-align: center;
