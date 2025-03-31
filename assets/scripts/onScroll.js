@@ -1,4 +1,4 @@
-import { typewriter } from "./typewrite"
+
 
 const observer = new IntersectionObserver((entries)=>{
     entries.forEach((entry) =>{
