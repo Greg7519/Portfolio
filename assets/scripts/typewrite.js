@@ -3,16 +3,15 @@
 var i =0;
 var speed = 50;
 
-function typewriter(text, element){
-
+function typewriter(text, element, customColor){
+    var cursor= document.getElementById("cursor");
     if(i<text.length ){
-        var cursor= document.getElementById("cursor");
+      
         if(i%2 != 0){
            if(cursor!=undefined){
 
             cursor.innerHTML = "|"
-            cursor.style.color = "rgb(255, 68, 0)";
-            cursor.style.width = "1px";
+            cursor.style.color = customColor;
             cursor.style.position = "absolute";
             cursor.style.right = "-2px";
             cursor.style.bottom = "0px";
@@ -24,25 +23,26 @@ function typewriter(text, element){
           
         }
         else{
-            // cursor.style.opacity = "0";
+            // setTimeout(()=>{
+            //     cursor.style.opacity = "0";
+            // },100)
+            
            
             element.innerHTML += text.charAt(i);
         }
         i++;
-        setTimeout(() => {typewriter(text,element)}, speed);
-        return i;
+        setTimeout(() => {typewriter(text,element,customColor)}, speed);
+        
     }
     else{
         cursor.style.display = "none";
     }
 }
 
-
-  
-    setTimeout(()=>{
+setTimeout(()=>{
      
-
-             typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"))
+          
+     typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"),"#ff4400");
         
        
       
@@ -55,18 +55,6 @@ function typewriter(text, element){
 
 
 
-
   
 
 
-
-// export function typewriter(text, element){
-//     if(i<text.length){
-//         element.innerHTML += text.charAt(i);
-//         i++;
-//         setTimeout(() => {typewriter(text,element)}, speed);
-//     }
-    
-  
-   
-// }
