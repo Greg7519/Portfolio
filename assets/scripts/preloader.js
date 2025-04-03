@@ -1,6 +1,6 @@
 document.body.style.overflowY = 'hidden';
 
-        window.onload = function(){
+
                 setTimeout(()=>{
                         this.document.getElementsByClassName("preloader")[0].classList.add(
                                 "goUp"
@@ -13,8 +13,10 @@ document.body.style.overflowY = 'hidden';
         
                 },1000)
                
+        
+                
              
             
            
-        }
+        
 
