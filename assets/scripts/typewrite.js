@@ -3,7 +3,7 @@
 var i =0;
 var speed = 50;
 
-function typewriter(text, element, customColor){
+window.typewriter = function typewriter(text, element, customColor){
     var cursor= element.querySelector("#cursor");
     if(i<text.length ){
       
