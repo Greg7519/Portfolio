@@ -1,7 +1,7 @@
 
 
 const windowLoc =location.href.split("/").slice(-1)[0];
-if(windowLoc == "about.html"){
+if(windowLoc == "about.html" || windowLoc == "about"){
     setTimeout(()=>{
      
           
@@ -14,7 +14,7 @@ if(windowLoc == "about.html"){
        
     },1300)
 }
-if(windowLoc == "index.html"){
+if(windowLoc == "index.html" || windowLoc == ""){
     setTimeout(()=>{
      
           
