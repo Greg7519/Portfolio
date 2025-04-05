@@ -3,8 +3,8 @@
 var i =0;
 var speed = 50;
 
-function typewriter(text, element, customColor){
-    var cursor= document.getElementById("cursor");
+window.typewriter = async function typewriter(text, element, customColor){
+    var cursor= element.querySelector("#cursor");
     if(i<text.length ){
       
         if(i%2 != 0){
@@ -35,21 +35,12 @@ function typewriter(text, element, customColor){
         
     }
     else{
-        cursor.style.display = "none";
+        if(cursor!=undefined){
+            cursor.style.display = "none";
+        }
+       
     }
 }
-
-setTimeout(()=>{
-     
-          
-     typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"),"#ff4400");
-        
-       
-      
-       
-       
-   
-},1200)
 
 
 

@@ -82,6 +82,10 @@ body,html{
 .orangeGrad{
     background-image:linear-gradient(to right, rgb(255, 136, 0), rgb(233, 85, 0)) ;
 }
+.fadeRight{
+    left: 50%;
+    transform: translateX();
+}
 .logoImg{
     border-radius: 50%; 
     height: auto;

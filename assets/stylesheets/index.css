@@ -43,6 +43,7 @@ body{
     justify-content: center;
     fill-opacity: 0;
     stroke-dasharray: 4500;
+    overflow: visible;
     animation: draw 4s ease infinite;
     height: 25%;
     width: 50%;
