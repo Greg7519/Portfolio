@@ -128,9 +128,39 @@ body{
     }
 }
 .fadeInRightEnd{
-    transform: translateX(100%);
-    transition: all 1s;
-    opacity: 1;
+    animation: moveRight;
+    animation-duration: 1s;
+    
+}
+.fadeInLeftEnd{
+    animation: moveLeft;
+    animation-duration: 1s;
+    
+}
+.fadeInBottomEnd{
+    animation: fadeDown;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+@keyframes moveLeft {
+    0%{
+        opacity: 0;
+        left:50%;
+    }
+    100%{
+        opacity: 1;
+        left:0;
+    }
+}
+@keyframes moveRight {
+    0%{
+        opacity: 0;
+        right:50%;
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
 }
 @keyframes blurOut{
     0%{
@@ -175,13 +205,16 @@ body{
     font-size: 3em;
     z-index: 2;
     
+
 }
 @keyframes fadeDown{
     0%{
-        transform: translateY(-100%);
+        opacity: 0;
+        bottom: 50%;
     }
     100%{
-        transform: translateY(0%);
+       opacity: 1;
+       bottom:0;
     }
 }
 @media only screen and (max-width:400px) {
@@ -202,6 +235,7 @@ body{
 }
 .projHeader{
     color: white;
+    position: relative;
     
 }
 .navbarTop a{
@@ -266,6 +300,8 @@ body{
 }
 .visitBtn{
     display: inline-block;
+    position: relative;
+    overflow: visible;
     border-radius: 4px;
     filter: blur(0);
     background-color: #007bff;
@@ -346,7 +382,7 @@ body{
     left:50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
 }
 .blurCont{
     height: 100%;
@@ -475,6 +511,8 @@ body{
     
 }
 .projSubheader{
+    display: block;
+    position: relative;
     color: white;
 }
 .footer{

@@ -13,7 +13,7 @@ if(windowLoc == "about.html" || windowLoc == "about"){
            
            
        
-    },1300)
+    },1250)
 }
 if(windowLoc == "index.html" || windowLoc == ""){
     setTimeout(()=>{
@@ -33,9 +33,26 @@ const observer = new IntersectionObserver((entries)=>{
         entries.forEach(async(entry) =>{
             
             if(entry.isIntersecting){
-                
+                if(entry.target.classList.contains("rightAnim")){
+                    entry.target.classList.remove("hidden")
+                    entry.target.classList.add("fadeInRightEnd");
+                    
+                }
+                else if(entry.target.classList.contains("leftAnim")){
+                    entry.target.classList.remove("hidden")
+                    entry.target.classList.add("fadeInLeftEnd");
+
+                }
+                // else if(entry.target.classList.contains("bottomAnim")){
+                //     entry.target.classList.remove("hidden")
+                //     entry.target.classList.add("fadeInBottomEnd");
+
+                // }
+                else{
                     entry.target.classList.add("show")
                 
+                }
+                 
                     
                 
               
