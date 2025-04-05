@@ -1,10 +1,11 @@
 
 
 const windowLoc =location.href.split("/").slice(-1)[0];
+console.log(windowLoc);
 if(windowLoc == "about.html" || windowLoc == "about"){
     setTimeout(()=>{
      
-          
+        
         typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"),"#ff4400");
             
            
