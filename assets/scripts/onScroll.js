@@ -1,4 +1,5 @@
-
+var i =0;
+var speed = 50;
 function typewriter(text, element, customColor){
     var cursor= element.querySelector("#cursor");
     if(i<text.length ){
@@ -33,6 +34,8 @@ function typewriter(text, element, customColor){
     else{
         if(cursor!=undefined){
             cursor.style.display = "none";
+            i=0;
+            
         }
        
     }
