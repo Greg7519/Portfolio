@@ -40,7 +40,10 @@ const observer = new IntersectionObserver((entries)=>{
                 }
                 else if(entry.target.classList.contains("leftAnim")){
                     entry.target.classList.remove("hidden")
+                    
                     entry.target.classList.add("fadeInLeftEnd");
+                    
+                    
 
                 }
                 // else if(entry.target.classList.contains("bottomAnim")){

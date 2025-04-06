@@ -132,6 +132,11 @@ body{
     animation-duration: 1s;
     
 }
+.fadeInLeftEndFaster{
+    animation: moveLeft;
+    animation-duration: 0.4s;
+    
+}
 .fadeInLeftEnd{
     animation: moveLeft;
     animation-duration: 1s;
@@ -147,11 +152,15 @@ body{
         opacity: 0;
         left:50%;
     }
+    20%{
+        left:25%;
+    }
     100%{
         opacity: 1;
         left:0;
     }
 }
+
 @keyframes moveRight {
     0%{
         opacity: 0;
@@ -288,11 +297,17 @@ body{
 }
 .footerLinksCont{
     color:white; 
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
     font-size: 20px; 
     width: 100vw;
+    
 }
-.footerIcon{
-    margin-right: 40px; 
+.footerIcon{  
+    text-decoration: none;
     color: rgb(255, 255, 255);
 }
 .orange{
@@ -519,9 +534,6 @@ body{
     margin: 0;
     height: 10vh;
     width: 100vw;
-    display: flex;
-    align-items: center;
-  
     background-color: #171717;
 }
 .show{
@@ -529,13 +541,16 @@ body{
     opacity: 1;
 }
 .footerLinks{
-    justify-content: end;
+   align-items: center;
+    display: flex;
+    flex-direction: row;
+    height:100%;
     position: relative;
-    margin: 20 20 0 20;
-    color: white; 
+    margin:3%;
+    text-decoration: none;
     float: right;
 }
-@property --fill{
+/* @property --fill{
     syntax: '<percentage>';
     inherits: true;
     initial-value: 0%;
@@ -551,4 +566,4 @@ body{
     inset: -3px;
     border-radius: inherit;
     background: conic-gradient(greenyellow var(--fill), transparent var(--fill));
-}
+} */
