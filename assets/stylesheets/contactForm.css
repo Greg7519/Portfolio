@@ -1,11 +1,31 @@
 #ContactForm{
     display: none;
-    position: absolute;
-    bottom:100%;
-    width:80vw;
-    height: 90vh;
+    
+}
+form{
+    position: fixed;
+    top:0;
+    width:100vw;
+    height: 100vh;
     z-index: 9999;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: none;
 }
 #activateForm:hover{
     cursor:pointer;
+}
+input[type = text], select,textarea{
+    padding: 20px ;
+    width: 80%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline:none;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
