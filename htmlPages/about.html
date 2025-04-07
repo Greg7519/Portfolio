@@ -6,11 +6,13 @@
     <title>About page</title>
     <script src="https://kit.fontawesome.com/7ca439eefa.js" crossorigin="anonymous"></script>
     <script defer src="/assets/scripts/preloader.js"></script> 
+    <script defer src="/assets/scripts/handleChanges.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         </style>
     <link rel="stylesheet" href="/assets/stylesheets/index.css">
+    <link rel="stylesheet" href="/assets/stylesheets/contactForm.css">
     <link rel="stylesheet" href="/assets/stylesheets/about.css">
 
 </head>
@@ -79,9 +81,18 @@
         <div class="footer">
             <div class= "footerLinksCont">
                     
-                    <a href="https://github.com/Greg7519?tab=repositories" class="footerLinks leftAnim hidden">
-                        <i class="fa fa-github footerIcon" ></i>
+                <div class="footerLinks hidden leftAnim">
+                    <a id="activateForm" >
+                        <i class="fa-solid fa-envelope footerIcon" id="activateForm"></i>
                     </a>
+                  
+                    <a href="https://github.com/Greg7519?tab=repositories" class="footerLinks">
+                        <i class="fa fa-github footerIcon" id="githubIcon" style="text-decoration: none;" ></i>
+                    </a>
+    
+                  
+
+                </div>
                 
             </div>
         </div>

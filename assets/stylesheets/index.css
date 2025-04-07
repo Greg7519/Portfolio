@@ -307,6 +307,7 @@ body{
     
 }
 .footerIcon{  
+    margin-left: 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -532,6 +533,7 @@ body{
 }
 .footer{
     margin: 0;
+    position: relative;
     height: 10vh;
     width: 100vw;
     background-color: #171717;
@@ -547,6 +549,7 @@ body{
     height:100%;
     position: relative;
     margin:3%;
+    row-gap: 10px;
     text-decoration: none;
     float: right;
 }

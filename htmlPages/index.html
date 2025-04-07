@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Page</title>
     <link rel="stylesheet" href="/assets/stylesheets/index.css">
+    <link rel="stylesheet" href="/assets/stylesheets/contactForm.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         </style>
     <script src="https://kit.fontawesome.com/7ca439eefa.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
-    <script  defer src="/assets/scripts/typewrite.js"></script>
-    <script   defer src="/assets/scripts/onScroll.js"></script>
+    <script  defer src="/assets/scripts/onScroll.js"></script>
     <script defer src="/assets/scripts/hideBlur.js"></script>
     <script defer src="/assets/scripts/animBlur.js"></script>
-  
+    <script defer src="/assets/scripts/handleChanges.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body >
@@ -108,16 +109,33 @@
         </div>
     </div>
     <div class="spacer100vh"></div>
-    <div class="footer">
+    <div id="ContactForm">
+        <form>
+            <label for="fname">
+
+            </label>
+            <input id="fname" type="text" placeholder="Your name">
+        </form>
+    </div>
+    <div class="footer" id="footer">
         <div class= "footerLinksCont">
-                
-                <a href="https://github.com/Greg7519?tab=repositories" class="footerLinks hidden leftAnim">
-                    <i class="fa fa-github footerIcon" style="text-decoration: none;" ></i>
-                </a>
+                <div class="footerLinks hidden leftAnim">
+                    <a id="activateForm" >
+                        <i class="fa-solid fa-envelope footerIcon" id="activateForm"></i>
+                    </a>
+                  
+                    <a href="https://github.com/Greg7519?tab=repositories" class="footerLinks">
+                        <i class="fa fa-github footerIcon" id="githubIcon" style="text-decoration: none;" ></i>
+                    </a>
+    
+                  
+
+                </div>
+              
             
         </div>
     </div>
-
+    <script src="/assets/scripts/typewrite.js"></script>
     <script defer src="/assets/scripts/preloader.js"></script> 
     
 </body>
