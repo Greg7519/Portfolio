@@ -9,7 +9,7 @@ document.body.style.overflowY = 'hidden';
                         setTimeout(()=>{
                                 this.document.getElementsByClassName("preloader")[0].style.display = "none";
                                 
-                        },1000)
+                        },900)
         
                 },1000)
                
