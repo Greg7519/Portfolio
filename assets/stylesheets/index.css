@@ -330,6 +330,9 @@ body{
     margin: 5px;
     
 }
+i:hover{
+    cursor: pointer;
+}
 .visitBtn span{
     cursor: pointer;
     display: inline-block;

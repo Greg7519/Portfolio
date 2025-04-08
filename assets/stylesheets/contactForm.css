@@ -1,21 +1,62 @@
+
 #ContactForm{
     display: none;
     
 }
+@keyframes appear {
+    0%{
+        top:100%;
+        backdrop-filter: blur(0px);
+    }
+    100%{
+        top:0%;
+        backdrop-filter: blur(2px);
+    }
+    
+}
+@keyframes disappear {
+    0%{
+        top:0%;
+        backdrop-filter: blur(2px);
+    }
+    100%{
+        top:100%;
+        backdrop-filter: blur(0px);
+    }
+    
+}
 form{
     position: fixed;
-    top:0;
+    top:100%;
     width:100vw;
     height: 100vh;
     z-index: 9999;
-    backdrop-filter: blur(5px);
     justify-content: center;
     flex-direction: column;
     align-items: center;
     display: none;
 }
-#activateForm:hover{
-    cursor:pointer;
+.submitBtn{
+    width:80%;
+    text-align: center;
+    color:white;
+    background-color: orangered;
+    font-family: "Saira Extra Condensed", sans-serif;
+    border: none;
+    min-height: 8vh;
+    border-radius: 8px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+#backCont{
+    width: 80%;
+}
+#backIcon{
+    align-self: flex-start; 
+    margin-top: 6px;
+    margin-bottom: 16px;
+    color: white;
+
 }
 input[type = text], select,textarea{
     padding: 20px ;
