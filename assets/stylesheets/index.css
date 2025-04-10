@@ -12,7 +12,7 @@ body{
 }
 
 .preloader{
-    width: 100%; 
+    width: 100vw; 
     background-color: rgb(21, 21, 21);
     height: 100%;
     position: fixed;

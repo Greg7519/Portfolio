@@ -26,4 +26,6 @@ function addBouncingAnim(bounceElems){
     }
 
 }
-addBouncingAnim(bounceElems);
+if(window.innerWidth>600){
+    addBouncingAnim(bounceElems);
+}

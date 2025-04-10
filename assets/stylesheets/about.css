@@ -4,6 +4,11 @@ body,html{
     margin: 0;
 
 }
+.logoName{
+    color: white;
+    position: relative; 
+    text-shadow:0px 3px 2px rgb(255, 255, 255, 0.4);
+}
 .logoCont.centerRow{
     width: 100vw;
     height: 100vh;
@@ -79,6 +84,10 @@ body,html{
     /* color: rgb(0, 170, 255); */
     position: relative;
 }
+.animated-text{
+    color:white;
+    text-shadow:0px 3px 2px rgb(255, 255, 255, 0.4);
+}
 .orangeGrad{
     background-image:linear-gradient(to right, rgb(255, 136, 0), rgb(233, 85, 0)) ;
 }
@@ -113,7 +122,11 @@ body,html{
 }
 
 @media screen and (max-width:600px) {
-    
+    .logoName{
+        color: white;
+        position: relative; 
+        text-shadow:0px 3px 2px rgb(255, 255, 255, 0.4);
+    }
     .logoCont.centerRow{
         flex-direction: column;
         height: 200vh;
