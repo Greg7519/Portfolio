@@ -24,7 +24,8 @@ body{
     
 }
 .whiteTextShadow{
-    text-shadow:0px 3px 2px rgb(255, 255, 255, 0.4);
+    text-shadow:0px 3px 2px rgb(255, 255, 255, 0.4)
+    0px 4px 11px 6px rgba(255, 255, 255, 0.75);
 }
 .preloaderHeader{
     color: white;
