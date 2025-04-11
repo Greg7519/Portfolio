@@ -1,8 +1,9 @@
 const bounceElems = document.getElementsByClassName("bounceTxt");
 var counter = 0;
-function addBouncingAnim(bounceElems){
+function addBouncingAnim(bounceElems,text){
     for(var i=0; i<bounceElems.length;i++){
-        var htmlCont = (bounceElems[i].textContent).trim();
+        var htmlCont = text;
+        bounceElems[i].innerHTML = "";
         var animationDelay = 0.02;
         var animDuration = animationDelay *htmlCont.length;
         bounceElems[i].innerHTML = "";
@@ -27,5 +28,8 @@ function addBouncingAnim(bounceElems){
 
 }
 if(window.innerWidth>600){
-    addBouncingAnim(bounceElems);
+    addBouncingAnim(bounceElems, "Building the technologies of tomorrow");
+}
+else{
+    bounceElems[0].innerHTML =  "Building the technologies of tomorrow";
 }
