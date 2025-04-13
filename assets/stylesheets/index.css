@@ -556,6 +556,7 @@ i:hover{
     color: white;
 }
 .footer{
+    position: relative;
     margin: 0;
     height: 10vh;
     width: 100vw;

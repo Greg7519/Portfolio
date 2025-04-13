@@ -8,6 +8,9 @@ document.body.style.overflowY = 'hidden';
                         document.body.style.overflowY = 'visible';
                         setTimeout(()=>{
                                 this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                              
+                                       
+                                    
                                 
                         },900)
         

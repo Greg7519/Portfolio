@@ -3,10 +3,10 @@
 const windowLoc =location.href.split("/").slice(-1)[0];
 console.log(windowLoc);
 if(windowLoc == "about.html" || windowLoc == "about"){
-    setTimeout(()=>{
+    setTimeout(async()=>{
      
         
-        typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"),"#ff4400");
+       await typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"),"#ff4400");
             
            
           
@@ -16,10 +16,10 @@ if(windowLoc == "about.html" || windowLoc == "about"){
     },1250)
 }
 if(windowLoc == "index.html" || windowLoc == ""){
-    setTimeout(()=>{
+    setTimeout(async()=>{
      
           
-        typewriter("Welcome to my page", document.getElementById("mainHeader"),"#1a1a1a ");
+       await typewriter("Welcome to my page", document.getElementById("mainHeader"),"#1a1a1a ");
             
            
           

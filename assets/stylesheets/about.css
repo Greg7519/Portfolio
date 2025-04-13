@@ -1,6 +1,8 @@
+/* beware of position absolute, breaks document! */
 body,html{
     width: 100%;
     height: 100%;
+    position: static;
     margin: 0;
 
 }
@@ -10,12 +12,13 @@ body,html{
     display: flex;
 }
 .logoCont.centerRow{
-   
+    position: relative;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     
    
     /* background-color: rgb(255, 255, 255); */
@@ -108,12 +111,21 @@ body,html{
     transform: translate(-50%,-50%);
     
 }
+.bgImgCont{
+    align-self: flex-start;
+    width:inherit;
+    height: inherit; 
+    position: absolute;
+     top:0; 
+     left:0;
+      z-index: 0;
+}
 #bgImgAbout{
-    background-image: url(/assets/images/wave-haikeiabout.svg); 
-    background-size: cover;
-    height: fit-content;
-    background-position: center; 
-    background-repeat: no-repeat;
+    
+    size:auto;
+    z-index: 0;
+   display: inline;
+   
 }
 
 @media screen and (max-width:600px) {
