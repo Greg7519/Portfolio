@@ -10,7 +10,6 @@
 body{
     font-family: "Saira Extra Condensed", sans-serif;
 }
-
 .preloader{
     width: 100vw; 
     background-color: rgb(21, 21, 21);
@@ -486,7 +485,12 @@ i:hover{
     z-index: 1;
 }
 .chartGenImg{
-    background-image: url(/assets/images/business.jpg);
+    background-image: url(/assets/images/business.jpg)
+}
+@keyframes animate-bg {
+    100%{
+        background-position: 50px 50px;
+    }
 }
 .dropdown-content a:hover{
     
