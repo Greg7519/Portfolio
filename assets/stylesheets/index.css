@@ -492,7 +492,7 @@ i:hover{
 }
 @keyframes animate-bg {
     100%{
-        background-position: 15% 50%;
+        background-position: 20% 50%;
     }
 }
 .dropdown-content a:hover{
@@ -585,8 +585,8 @@ i:hover{
     float: right;
 }
 .infScroll{
-    background-size: 100%;
-    animation:animate-bg 6s infinite alternate;
+    background-size: cover;
+    animation:animate-bg 5s linear infinite alternate;
     
    
 }

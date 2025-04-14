@@ -8,7 +8,11 @@ function animateSvg(id1, id2, dur, restr){
 }
 
     setTimeout(()=>{
-        animateSvg("#bg1", "#bg2", 3000,false);
+        animateSvg("#bg1", "#bg2", 3000,true);
+        
+    },900)
+    setTimeout(()=>{
+        animateSvg("#bg11", "#bg21", 3000,false);
         
     },900)
         
