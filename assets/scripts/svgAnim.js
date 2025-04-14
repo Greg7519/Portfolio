@@ -1,15 +1,19 @@
-function animateSvg(id1, id2, dur){
+function animateSvg(id1, id2, dur, restr){
     
-    const tween = KUTE.fromTo(id1, {path:id1},{path:id2}, {repeat:999, duration:dur, yoyo:true})
-    tween.start();
+   
+    if(window.innerWidth>600||!restr){
+        const tween = KUTE.fromTo(id1, {path:id1},{path:id2}, {repeat:999, duration:dur, yoyo:true})
+        tween.start();
+    }
 }
-if(window.innerWidth>600){
+
     setTimeout(()=>{
-        animateSvg("#bg1", "#bg2", 3000);
+        animateSvg("#bg1", "#bg2", 3000,false);
+        
     },900)
         
     
         
     
     
-}
+

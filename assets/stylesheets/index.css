@@ -7,6 +7,7 @@
 
 
 }
+
 body{
     font-family: "Saira Extra Condensed", sans-serif;
 }
@@ -276,11 +277,13 @@ body{
     padding:20px 16px;
     text-decoration: none;
     font-size:17px;
+   
 
 }
 .navbarTop a:hover{
     position: relative;
     top:0;
+
     overflow: hidden;
     background-color: #171717;
     color:rgb(255, 251, 251);
@@ -489,7 +492,7 @@ i:hover{
 }
 @keyframes animate-bg {
     100%{
-        background-position: 50px 50px;
+        background-position: 15% 50%;
     }
 }
 .dropdown-content a:hover{
@@ -580,6 +583,12 @@ i:hover{
     row-gap: 10px;
     text-decoration: none;
     float: right;
+}
+.infScroll{
+    background-size: 100%;
+    animation:animate-bg 6s infinite alternate;
+    
+   
 }
 /* @property --fill{
     syntax: '<percentage>';
