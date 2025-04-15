@@ -2,7 +2,7 @@
 
 const windowLoc =location.href.split("/").slice(-1)[0];
 console.log(windowLoc);
-if(windowLoc == "about.html" || windowLoc == "about"){
+if(windowLoc.includes("about")){
     setTimeout(async()=>{
      
         
@@ -14,6 +14,34 @@ if(windowLoc == "about.html" || windowLoc == "about"){
            
        
     },1250)
+}
+if(windowLoc.includes("chartgen")){
+    setTimeout(async()=>{
+     
+        
+        await typewriter("Chart generator: Generate free charts", document.getElementById("mainHeader"),"#ff4400");
+             
+            
+           
+            
+            
+        
+     },1250)
+
+}
+if(windowLoc.includes("nebrion")){
+    setTimeout(async()=>{
+     
+        
+        await typewriter("Nebrion:Chat with your loved ones", document.getElementById("mainHeader"),"#ff4400");
+             
+            
+           
+            
+            
+        
+     },1250)
+
 }
 if(windowLoc == "index.html" || windowLoc == ""){
     setTimeout(async()=>{
