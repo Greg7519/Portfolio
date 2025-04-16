@@ -533,9 +533,8 @@ i:hover{
     
 }
 @media screen and (max-width:1280px){
-    .hideResp{
-        display: hidden;
-    }
+   
+   
     .split{
         width: 100vw;
         margin-bottom: 0;
@@ -566,7 +565,9 @@ i:hover{
     .blurAnim{
         backdrop-filter: blur(0px);
     }
-    
+    .hideResp{
+        height:0;
+    }
 }
 .projSubheader{
     display: block;
