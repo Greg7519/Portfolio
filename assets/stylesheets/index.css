@@ -10,6 +10,8 @@
 
 body{
     font-family: "Saira Extra Condensed", sans-serif;
+    overflow: hidden;
+    position: static;
 }
 .preloader{
     width: 100vw; 
@@ -236,6 +238,10 @@ body{
     z-index: 2;
     
 
+}
+.orangeTextShadow{
+    color: rgb(255, 85, 0);   
+    text-shadow:2px 2px #fb3a00;
 }
 .uppercase{
     text-transform: uppercase;

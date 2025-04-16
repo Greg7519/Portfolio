@@ -56,8 +56,8 @@ if(windowLoc == "index.html" || windowLoc == ""){
        
     },1300)
 }
-
-const observer = new IntersectionObserver((entries)=>{
+onload =()=>{
+    const observer = new IntersectionObserver((entries)=>{
         entries.forEach(async(entry) =>{
             
             if(entry.isIntersecting){
@@ -104,4 +104,6 @@ const observer = new IntersectionObserver((entries)=>{
         },1000)
        
     })
+}
+
 
