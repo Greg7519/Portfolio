@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/7ca439eefa.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
     <script  defer src="/assets/scripts/onScroll.js"></script>
+    <script defer src="/assets/scripts/hideBlur.js"></script>
+    <script defer src="/assets/scripts/animBlur.js"></script>
     <script defer src="/assets/scripts/handleChanges.js"></script>
     <script defer src="/assets/scripts/textAnim.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -30,7 +32,7 @@
        
     </div>
     <div id="startOfPage" style="background-image: url(/assets/images/chartpage.jpg);" >
-      
+        <div class="blurDiv" id="startBlur"></div> 
         <div class="navbarTop" >
             <a href="/htmlPages/index.html">
                 Home
@@ -57,12 +59,8 @@
             <a href="/htmlPages/about.html" style="float: right;">About</a>
             </div>
        
-            <div class="centered" style="position: relative;">
-                <h1 class= "orangeTextShadow" id="mainHeader" style="font-size: 3em;"></h1> 
-                <a class="visitBtn leftAnim hidden" style="background-color: none;" href = "https://chartgeneratorfree.netlify.app/">
-                    <span>Click to visit</span>
-                </a>
-            </div>
+           <h1 class="mainHeader orangeTextShadow" id="mainHeader" ></h1> 
+        
             
       
         
@@ -86,7 +84,7 @@
        
     </div>
     <div class="respSpacer"></div>
-    <div class="split scrollableRight Right  hideResp" >
+    <div class="split scrollableRight Right" >
         <div class="bgImg" style="background-image: url(/assets/images/chart2.jpg);"></div>
         <div class="blurAnim blurCont" ></div>
         
@@ -106,8 +104,8 @@
             <h2  class="projSubheader leftAnim hidden">chart.js</h2>
         </div>
     </div>
-    <div class="respSpacer  hideResp"></div>
-    <div class="split Left  hideResp ">
+    <div class="respSpacer"></div>
+    <div class="split Left ">
         
         
         <div class="bgImg chartGenImg "></div>

@@ -149,14 +149,12 @@ body{
     .mainHeader{
         font-size: 8vw;
     }
-   
 }
 .fadeInRightEnd{
     animation: moveRight;
     animation-duration: 1s;
     
 }
-
 .fadeInLeftEndFaster{
     animation: moveLeft;
     animation-duration: 0.4s;
@@ -516,18 +514,11 @@ i:hover{
   
     display: block;
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-height: 720px) {
     .preloaderImg{
         height: 30%;
     }
-    .spacer100vh{
-        display: none;
-        
-    }
-    .hideResp{
-        height:0;
-        display: none;
-    }
+    
 }
 @media screen and (max-height: 1080px) and (min-height: 720px){
     .preloaderImg{
@@ -542,7 +533,9 @@ i:hover{
     
 }
 @media screen and (max-width:1280px){
-   
+    .hideResp{
+        display: hidden;
+    }
     .split{
         width: 100vw;
         margin-bottom: 0;
