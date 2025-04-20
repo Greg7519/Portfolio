@@ -73,6 +73,12 @@ onload =()=>{
                     
                     
 
+                    
+                }
+                else if(entry.target.classList.contains("bottomAnim")){
+                    entry.target.classList.remove("hidden")
+                    
+                    entry.target.classList.add("fadeInBottomEnd");
                 }
                 // else if(entry.target.classList.contains("bottomAnim")){
                 //     entry.target.classList.remove("hidden")

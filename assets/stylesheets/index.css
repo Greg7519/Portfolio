@@ -167,7 +167,6 @@ body{
 }
 .fadeInBottomEnd{
     animation: fadeDown;
-    animation-delay: 1s;
     animation-duration: 1s;
 }
 @keyframes moveLeft {
@@ -249,7 +248,7 @@ body{
 @keyframes fadeDown{
     0%{
         opacity: 0;
-        bottom: 50%;
+        bottom: 100%;
     }
     100%{
        opacity: 1;
