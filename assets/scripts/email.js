@@ -9,10 +9,12 @@ function sendMail(){
         subject:message.value
 
     }
-    emailjs.send("service_hv5w7ib","template_qed489a", templateParams)
+    emailjs.send("service_qsoo8qp","template_ajjlfbg", templateParams)
 }
 
 submitBtn.onclick = (e)=>{
     sendMail()
     e.preventDefault()
+    firstName.innerHTML = "";
+    email.innerHTML
 }
