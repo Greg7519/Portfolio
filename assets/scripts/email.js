@@ -16,5 +16,6 @@ submitBtn.onclick = (e)=>{
     sendMail()
     e.preventDefault()
     firstName.innerHTML = "";
-    email.innerHTML
+    email.innerHTML = ""
+    message.innerHTML=""
 }
