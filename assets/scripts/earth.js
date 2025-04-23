@@ -52,15 +52,15 @@ earthGroup.add(lightsMesh)
 scene.add(earthGroup);
 lightsMesh.scale.setScalar(0);
 function addStar(){
-    const geometry = new THREE.SphereGeometry(0.17,24,24)
+    const geometry = new THREE.SphereGeometry(0.15,10,10)
     const material = new THREE.MeshStandardMaterial({color:0xffffff})
     const star = new THREE.Mesh(geometry,material)
     // missing {}
-    const [x,y,z] = Array(3).fill().map(()=>THREE.MathUtils.randFloatSpread(100))
+    const [x,y,z] = Array(3).fill().map(()=>THREE.MathUtils.randFloatSpread(-200))
     star.position.set(x,y,z)
     scene.add(star);
 }
-Array(200).fill().forEach(addStar)
+Array(400).fill().forEach(()=>addStar())
 // const gridHelper = new THREE.GridHelper(200,50)
 // const pointLight = new THREE.PointLight(0xffffff)
 // pointLight.position.set(5,5,5)
@@ -72,8 +72,7 @@ function animate(t=0){
     requestAnimationFrame(animate)
     mesh.rotation.y += -0.002
     lightsMesh.rotation.y += -0.002
-
-    if(mesh.scale.x <0.7){
+    if(mesh.scale.x <0.85){
         mesh.scale.addScalar(0.01)
         lightsMesh.scale.addScalar(0.01)
     }

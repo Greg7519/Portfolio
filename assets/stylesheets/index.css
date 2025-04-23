@@ -495,6 +495,9 @@ i:hover{
     right: 0;
     z-index: 1;
 }
+canvas{
+    width:100vw;
+}
 .chartGenImg{
     background-image: url(/assets/images/business.jpg)
 }
