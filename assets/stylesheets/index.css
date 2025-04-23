@@ -497,6 +497,7 @@ i:hover{
 }
 canvas{
     width:100vw;
+    touch-action: auto !important;
 }
 .chartGenImg{
     background-image: url(/assets/images/business.jpg)
