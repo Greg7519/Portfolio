@@ -239,8 +239,8 @@ body{
 
 }
 .orangeTextShadow{
-    color: rgb(255, 85, 0);   
-    text-shadow:2px 2px #fb3a00;
+    color: rgb(255, 255, 255);   
+    text-shadow:2px 2px #c1c1c1;
 }
 .uppercase{
     text-transform: uppercase;
