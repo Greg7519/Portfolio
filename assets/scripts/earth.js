@@ -37,7 +37,10 @@ const light = new THREE.MeshBasicMaterial({
 const lightsMesh = new THREE.Mesh(geo,light)
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableZoom = false
+if(window.innerWidth<1024){
+    controls.enableZoom = false
+}
+
 controls.enableDamping = true;
 controls.dampingFactor = 0.03;
 const sunLight = new THREE.DirectionalLight(0xffffff);
