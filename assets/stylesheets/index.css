@@ -530,14 +530,30 @@ canvas{
     
 }
 @media screen and (min-height: 1080px) {
+    canvas{
+        width:100vw;
+        height: 101vh;
+    }
     .preloaderImg{
         height: 10%;
     }
     
 }
+@media screen and(max-height:720px) {
+    canvas{
+        width:100vw;
+        height: 101vh;
+    }
+}
+@media screen and(min-height:721px) {
+    canvas{
+        width:100vw;
+        height: 101vh;
+    }
+}
 @media screen and (max-width:1280px){
    
-   
+    
     .split{
         width: 100vw;
         margin-bottom: 0;

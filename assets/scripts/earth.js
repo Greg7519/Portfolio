@@ -99,7 +99,7 @@ function animate(t=0){
     requestAnimationFrame(animate)
     mesh.rotation.y += -0.002
     lightsMesh.rotation.y += -0.002
-    if(mesh.scale.x <0.65){
+    if(mesh.scale.x <0.55){
         mesh.scale.addScalar(0.01)
         lightsMesh.scale.addScalar(0.01)
     }
@@ -110,3 +110,11 @@ function animate(t=0){
     controls.update()
 }
 animate()
+bgSelector.addEventListener('resize', onWindowResize,false)
+function onWindowResize(){
+    camera.aspect =bgSelector.innerWidth/bgSelector.innerHeight;
+    camera.updateProjectionMatrix()
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.render(scene,camera);
+    bgSelector.appendChild(renderer.domElement);
+}
