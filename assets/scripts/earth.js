@@ -1,5 +1,9 @@
 import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { FontLoader } from 'three/addons/loaders/FontLoader.js'
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+
+
 const bgSelector = document.getElementById("startOfPage");
 const w = window.innerWidth;
 const h = window.innerHeight;
@@ -50,6 +54,25 @@ scene.add(mesh);
 scene.add(sunLight);
 
 const earthGroup = new THREE.Group();
+const fontLoader = new FontLoader();
+fontLoader.load( 'assets/scripts/SairaExtraCondensed-Regular.ttf', function ( font ) {
+
+	const geometry = new TextGeometry( 'Hello three.js!', {
+		font: font,
+		size: 80,
+		depth: 5,
+		curveSegments: 12,
+		bevelEnabled: true,
+		bevelThickness: 10,
+		bevelSize: 8,
+		bevelOffset: 0,
+		bevelSegments: 5
+	} );
+    const textMesh = new THREE.Mesh(geometry,[
+        new THREE.Mesh(geometry,{color:0xad4000})
+    ])
+    scene.add(textMesh)
+} );
 earthGroup.rotation.y = -23.4 * Math.PI/180
 earthGroup.add(mesh);
 earthGroup.add(lightsMesh)
