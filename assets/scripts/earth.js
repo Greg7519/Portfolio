@@ -73,7 +73,7 @@ function animate(t=0){
     requestAnimationFrame(animate)
     mesh.rotation.y += -0.002
     lightsMesh.rotation.y += -0.002
-    if(mesh.scale.x <0.85){
+    if(mesh.scale.x <0.65){
         mesh.scale.addScalar(0.01)
         lightsMesh.scale.addScalar(0.01)
     }
