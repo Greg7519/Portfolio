@@ -109,7 +109,10 @@ function animate(t=0){
     renderer.render(scene,camera);
     controls.update()
 }
-animate()
+if(window.innerWidth>1024){
+    animate()
+}
+
 bgSelector.addEventListener('resize', onWindowResize,false)
 function onWindowResize(){
     camera.aspect =bgSelector.innerWidth/bgSelector.innerHeight;
