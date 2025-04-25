@@ -624,6 +624,7 @@ canvas{
 canvas{
     width:100vw;
     height: 101vh;
+    
 }
 /* @property --fill{
     syntax: '<percentage>';

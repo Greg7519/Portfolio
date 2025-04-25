@@ -23,6 +23,7 @@ const loader = new THREE.TextureLoader();
 const geo = new THREE.IcosahedronGeometry(1.0,detail);
 
 const mat = new THREE.MeshStandardMaterial({map: loader.load("/assets/images/earthmap1k.jpg")})
+mat.map.minFilter = THREE.LinearFilter
 const mesh = new THREE.Mesh(geo,mat);
 const scene = new THREE.Scene();
 // scene.background = spaceTexture
@@ -109,9 +110,9 @@ function animate(t=0){
     renderer.render(scene,camera);
     controls.update()
 }
-if(window.innerWidth>1024){
+
     animate()
-}
+
 
 bgSelector.addEventListener('resize', onWindowResize,false)
 function onWindowResize(){
