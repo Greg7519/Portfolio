@@ -109,6 +109,7 @@ function animate(t=0){
     
     renderer.render(scene,camera);
     controls.update()
+    renderer.setPixelRatio(window.devicePixelRatio)
 }
 
     animate()
