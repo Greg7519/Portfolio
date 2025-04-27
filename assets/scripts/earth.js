@@ -7,10 +7,9 @@ import {getFresnelMat} from './3dSrc/getFresnelMat.js'
 
 const bgSelector = document.getElementById("startOfPage");
 const w = window.innerWidth;
-const h = window.innerHeight + window.innerHeight/100;
-const renderer =  new THREE.WebGLRenderer({antialias:true,logarithmicDepthBuffer:true})
+const h = window.innerHeight;
+const renderer =  new THREE.WebGLRenderer({antialias:true})
 renderer.setSize(w,h);
-
 bgSelector.appendChild(renderer.domElement);
 
 const fov = 75;
@@ -25,7 +24,6 @@ const loader = new THREE.TextureLoader();
 const geo = new THREE.IcosahedronGeometry(1.0,detail);
 
 const mat = new THREE.MeshStandardMaterial({map: loader.load("/assets/images/earthmap1k.jpg")})
-mat.map.minFilter = THREE.LinearFilter
 const mesh = new THREE.Mesh(geo,mat);
 const scene = new THREE.Scene();
 // scene.background = spaceTexture
@@ -120,10 +118,11 @@ function animate(t=0){
     mesh.rotation.y += -0.002
     lightsMesh.rotation.y += -0.002
     cloudsMesh.rotation.y+=-0.002
-    glowMesh.rotation.y -=0.002
+    glowMesh.rotation.y+=-0.002
     if(mesh.scale.x <0.55){
         if(mesh.scale.x == 0.54){
             cloudsMesh.scale.addScalar(0.02)
+            
         }
         mesh.scale.addScalar(0.01)
         glowMesh.scale.addScalar(0.01)
@@ -135,8 +134,6 @@ function animate(t=0){
     
     renderer.render(scene,camera);
     controls.update()
-    renderer.setPixelRatio(window.devicePixelRatio)
-  
 }
 setTimeout(()=>{
     animate()
