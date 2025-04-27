@@ -6,9 +6,10 @@ import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
 const bgSelector = document.getElementById("startOfPage");
 const w = window.innerWidth;
-const h = window.innerHeight;
+const h = window.innerHeight + window.innerHeight/100;
 const renderer =  new THREE.WebGLRenderer({antialias:true,logarithmicDepthBuffer:true})
 renderer.setSize(w,h);
+
 bgSelector.appendChild(renderer.domElement);
 
 const fov = 75;
@@ -110,7 +111,7 @@ function animate(t=0){
     renderer.render(scene,camera);
     controls.update()
     renderer.setPixelRatio(window.devicePixelRatio)
-    renderer.logar
+  
 }
     animate()
 
