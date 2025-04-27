@@ -601,7 +601,7 @@ canvas{
 .footer{
     position: relative;
     margin: 0;
-    height: 10vh;
+    height: 8vh;
     width: 100vw;
     background-color: #171717;
 }
@@ -625,10 +625,6 @@ canvas{
     animation:animate-bg 5s linear infinite alternate;
     
    
-}
-canvas{
-    width:100vw;
-    height: 101vh;
 }
 /* @property --fill{
     syntax: '<percentage>';
