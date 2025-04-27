@@ -7,7 +7,7 @@ import {getFresnelMat} from './3dSrc/getFresnelMat.js'
 
 const bgSelector = document.getElementById("startOfPage");
 const w = window.innerWidth;
-const h = window.innerHeight;
+const h = window.innerHeight + window.innerHeight/100;
 const renderer =  new THREE.WebGLRenderer({antialias:true})
 renderer.setSize(w,h);
 bgSelector.appendChild(renderer.domElement);
@@ -16,10 +16,9 @@ const fov = 75;
 const aspect = w/h
 const near = 0.1;
 const far = 1000;
-const spaceTexture = new THREE.TextureLoader().load("\assets\images\space.jpg")
 const camera = new THREE.PerspectiveCamera(fov,aspect,near,far);
 camera.position.z = 2;
-const detail =12;
+const detail =100;
 const loader = new THREE.TextureLoader();
 const geo = new THREE.IcosahedronGeometry(1.0,detail);
 
@@ -61,6 +60,7 @@ mesh.scale.setScalar(0,0,0)
 scene.add(mesh);
 scene.add(sunLight);
 const fresnelMat = getFresnelMat()
+
 const glowMesh = new THREE.Mesh(geo,fresnelMat)
 
 const earthGroup = new THREE.Group();
@@ -135,9 +135,9 @@ function animate(t=0){
     renderer.render(scene,camera);
     controls.update()
 }
-setTimeout(()=>{
+
     animate()
-},900)
+
 
 bgSelector.addEventListener('resize', onWindowResize,false)
 function onWindowResize(){
