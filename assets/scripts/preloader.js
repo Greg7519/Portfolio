@@ -4,12 +4,12 @@ document.body.style.overflowY = 'hidden';
                 setTimeout(()=>{
                         if(windowLoc == "index.html" || windowLoc == ""){
                                 drawEarth().then(()=>{
-                                        this.document.getElementsByClassName("preloader")[0].classList.add(
-                                                "goUp"
-                                        );
-                                        // document.body.style.overflowY = 'visible';
-                                      
+                                     
+                                        document.body.style.overflowY = 'visible';
+                                     
                                         this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                        
+                                       
                                         
                                 })
                         }
@@ -17,7 +17,7 @@ document.body.style.overflowY = 'hidden';
                                 this.document.getElementsByClassName("preloader")[0].classList.add(
                                         "goUp"
                                 );
-                                // document.body.style.overflowY = 'visible';
+                                document.body.style.overflowY = 'visible';
                                 setTimeout(()=>{
                                         this.document.getElementsByClassName("preloader")[0].style.display = "none";
                                 },1000)

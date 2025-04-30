@@ -120,16 +120,19 @@ window.drawEarth = async function drawEarth(){
         lightsMesh.rotation.y += -0.002
         cloudsMesh.rotation.y+=-0.002
         glowMesh.rotation.y+=-0.002
-        if(mesh.scale.x <0.55){
-            if(mesh.scale.x == 0.54){
-                cloudsMesh.scale.addScalar(0.02)
-                
+      
+            if(mesh.scale.x <0.55){
+                if(mesh.scale.x == 0.54){
+                    cloudsMesh.scale.addScalar(0.02)
+                    
+                }
+                mesh.scale.addScalar(0.01)
+                glowMesh.scale.addScalar(0.01)
+                lightsMesh.scale.addScalar(0.01)
+                cloudsMesh.scale.addScalar(0.01)
             }
-            mesh.scale.addScalar(0.01)
-            glowMesh.scale.addScalar(0.01)
-            lightsMesh.scale.addScalar(0.01)
-            cloudsMesh.scale.addScalar(0.01)
-        }
+    
+        
       
         
         
