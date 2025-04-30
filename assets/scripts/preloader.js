@@ -2,16 +2,28 @@ document.body.style.overflowY = 'hidden';
 
 
                 setTimeout(()=>{
-                       
-                        drawEarth().then(()=>{
+                        if(windowLoc == "index.html" || windowLoc == ""){
+                                drawEarth().then(()=>{
+                                        this.document.getElementsByClassName("preloader")[0].classList.add(
+                                                "goUp"
+                                        );
+                                        // document.body.style.overflowY = 'visible';
+                                      
+                                        this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                        
+                                })
+                        }
+                        else{
                                 this.document.getElementsByClassName("preloader")[0].classList.add(
                                         "goUp"
                                 );
                                 // document.body.style.overflowY = 'visible';
-                              
-                                this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                setTimeout(()=>{
+                                        this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                },1000)
                                 
-                        })
+                        }
+                       
                        
         
                 },1000)
