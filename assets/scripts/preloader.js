@@ -9,7 +9,7 @@ document.body.style.overflowY = 'hidden';
                                         this.document.getElementsByClassName("preloader")[0].classList.add(
                                                 "goUp"
                                         );
-                                        // this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                      
                                         
                                        
                                         
@@ -22,7 +22,7 @@ document.body.style.overflowY = 'hidden';
                                
                                 setTimeout(()=>{
                                         document.body.style.overflowY = 'visible';
-                                        this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                        
                                 },1000)
                                 
                         }
