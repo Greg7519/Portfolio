@@ -4,7 +4,8 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js'
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import getStarfield from './3dSrc/getStarfield.js'
 import {getFresnelMat} from './3dSrc/getFresnelMat.js'
-function drawEarth(){
+
+window.drawEarth = async function drawEarth(){
     const bgSelector = document.getElementById("startOfPage");
     const w = window.innerWidth;
     const h = window.innerHeight + window.innerHeight/100;
@@ -135,10 +136,6 @@ function drawEarth(){
         renderer.render(scene,camera);
         controls.update()
     }
-    renderer.domElement.onload =( () =>{
-      
-    
-    })()
     window.animate = animate()
    
     animate()
@@ -156,6 +153,4 @@ function drawEarth(){
 
 }
 
-setTimeout(()=>{
-    drawEarth()
-},900)
+     
