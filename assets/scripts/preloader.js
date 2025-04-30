@@ -6,8 +6,10 @@ document.body.style.overflowY = 'hidden';
                                 drawEarth().then(()=>{
                                      
                                         document.body.style.overflowY = 'visible';
-                                     
-                                        this.document.getElementsByClassName("preloader")[0].style.display = "none";
+                                        this.document.getElementsByClassName("preloader")[0].classList.add(
+                                                "goUp"
+                                        );
+                                        // this.document.getElementsByClassName("preloader")[0].style.display = "none";
                                         
                                        
                                         
@@ -17,8 +19,9 @@ document.body.style.overflowY = 'hidden';
                                 this.document.getElementsByClassName("preloader")[0].classList.add(
                                         "goUp"
                                 );
-                                document.body.style.overflowY = 'visible';
+                               
                                 setTimeout(()=>{
+                                        document.body.style.overflowY = 'visible';
                                         this.document.getElementsByClassName("preloader")[0].style.display = "none";
                                 },1000)
                                 

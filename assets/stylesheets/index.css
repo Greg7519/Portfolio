@@ -120,6 +120,7 @@ body{
 }
 .goUp{
     animation: goup ;
+    animation-fill-mode: forwards;
     animation-duration: 1s;
 }
 .fadeOut{
