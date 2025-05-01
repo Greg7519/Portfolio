@@ -145,14 +145,14 @@ if(window.innerWidth>768){
        
         
         
-        bgSelector.addEventListener('resize', onWindowResize,false)
+      
         function onWindowResize(){
-            camera.aspect =bgSelector.innerWidth/bgSelector.innerHeight;
+            camera.aspect =window.innerWidth/window.innerHeight;
             camera.updateProjectionMatrix()
             renderer.setSize(window.innerWidth, window.innerHeight)
-            renderer.render(scene,camera);
-            bgSelector.appendChild(renderer.domElement);
+            
         }
+        window.addEventListener('resize', onWindowResize,false)
     
     }
 }
