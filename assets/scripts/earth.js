@@ -68,7 +68,7 @@ if(window.innerWidth>768){
         const earthGroup = new THREE.Group();
         const fontLoader = new FontLoader();
         var textMesh;
-        fontLoader.load( './Anton_Regular.json', function ( font ) {
+        fontLoader.load( '/assets/fonts/Anton_Regular.json', function ( font ) {
         
         	const geometry = new TextGeometry( 'Welcome to my page', {
         		font: font,
