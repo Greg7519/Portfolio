@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { FontLoader } from 'three/addons/loaders/FontLoader.js'
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import getStarfield from './3dSrc/getStarfield.js'
 import {getFresnelMat} from './3dSrc/getFresnelMat.js'
@@ -21,6 +21,7 @@ if(window.innerWidth>768){
         camera.position.z = 2;
         const detail =100;
         const loader = new THREE.TextureLoader();
+
         const geo = new THREE.IcosahedronGeometry(1.0,detail);
         
         const mat = new THREE.MeshStandardMaterial({map: loader.load("/assets/images/earthmap1k.jpg")})
@@ -66,30 +67,66 @@ if(window.innerWidth>768){
         
         const earthGroup = new THREE.Group();
         const fontLoader = new FontLoader();
+        var textMesh;
+        fontLoader.load( './Anton_Regular.json', function ( font ) {
         
-        // fontLoader.load( 'assets/scripts/SairaExtraCondensed-Regular.ttf', function ( font ) {
+        	const geometry = new TextGeometry( 'Welcome to my page', {
+        		font: font,
+                
+        		size:0.1,
+               
+                depth:0.01,
+                curveSegments:12,
+                
+                     
+                // curveSegments: 12,
+                bevelEnabled: true,
+                bevelThickness: 0.01,
+                bevelSize: 0,
+                // bevelOffset: 0,
+                bevelSegments: 12
+        		
+        	} );
+            const textMaterial =  [new THREE.MeshStandardMaterial({color:0xfe9600}),new THREE.MeshStandardMaterial({color:0xfe9600 })]
+           textMesh= new THREE.Mesh(geometry,
+                textMaterial
+            )
+            textMesh.name = "3dtext";
+            textMesh.position.x=-0.5;
+            textMesh.position.y=0;
+            textMesh.position.z=0.8
+            const textLight = new THREE.PointLight({color:0xFFFFFF},1,0.15)
+            textMesh.add(textLight);
+            textLight.position.x=0;
+            textLight.position.z=0.8
+            mesh.add(textMesh)
+            var txtObj = new THREE.Object3D();
+            txtObj.add(textMesh)
+            txtObj.name = 'textCont'
+            scene.add(txtObj)
         
-        // 	const geometry = new TextGeometry( 'Hello three.js!', {
-        // 		font: font,
-        // 		size: 80,
-        // 		depth: 5,
-        // 		curveSegments: 12,
-        // 		bevelEnabled: true,
-        // 		bevelThickness: 10,
-        // 		bevelSize: 8,
-        // 		bevelOffset: 0,
-        // 		bevelSegments: 5
-        // 	} );
-        //     const textMesh = new THREE.Mesh(geometry,[
-        //         new THREE.Mesh(geometry,{color:0xad4000})
-        //     ])
-        //     scene.add(textMesh)
-        // } );
+            // textMesh.rotation.y = -0.5;
+           
+           
+        } );
+        var moonGeo = new THREE.IcosahedronGeometry(0.16,12);
+        var moonMat = new THREE.MeshStandardMaterial({map:loader.load("/assets/images/moonmap1k.jpg")});
+        const moon = new THREE.Mesh(moonGeo,moonMat)
+        moon.position.z= 1.35
+        const moonObj = new THREE.Object3D();
+        moonObj.add(moon);
+        scene.add(moonObj);
+       
         earthGroup.rotation.y = -23.4 * Math.PI/180
+        
+        
+      
         earthGroup.add(mesh);
+       
         earthGroup.add(cloudsMesh)
         earthGroup.add(lightsMesh)
         earthGroup.add(glowMesh)
+        
         scene.add(earthGroup);
         
         lightsMesh.scale.setScalar(0);
@@ -120,7 +157,20 @@ if(window.innerWidth>768){
             lightsMesh.rotation.y += -0.002
             cloudsMesh.rotation.y+=-0.002
             glowMesh.rotation.y+=-0.002
-          
+            moonObj.rotateY(0.005)
+           
+            try{
+                // scene.getObjectByName("textCont").rotateX(0.002)
+                scene.getObjectByName("textCont").rotateY(-0.002)
+                
+           
+
+            }
+            catch{
+                console.log("Not found")
+            }
+           
+            
                 if(mesh.scale.x <0.55){
                     if(mesh.scale.x == 0.54){
                         cloudsMesh.scale.addScalar(0.02)
