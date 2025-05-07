@@ -122,6 +122,14 @@ if(window.innerWidth>768){
             txtObj.add(textMesh)
             txtObj.name = 'textCont'
             scene.add(txtObj)
+            // added here, normally should be in preloader
+            setTimeout(()=>{
+                document.getElementsByClassName("preloader")[0].classList.add(
+                    "goUp"
+            );
+                document.body.style.overflowY = 'visible';
+                this.document.getElementsByClassName("preloader")[0].style.display = "none";
+            },1000)
             animate()
             // textMesh.rotation.y = -0.5;
            
