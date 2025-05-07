@@ -122,7 +122,7 @@ if(window.innerWidth>768){
             txtObj.add(textMesh)
             txtObj.name = 'textCont'
             scene.add(txtObj)
-        
+            animate()
             // textMesh.rotation.y = -0.5;
            
            
@@ -162,7 +162,7 @@ if(window.innerWidth>768){
             
         }
         window.addEventListener('resize', onWindowResize,false)
-        loader.load(null,()=>{
+        const load = fontLoader.load(undefined, ()=>{
             animate()
         })
             function animate(t=0){
@@ -206,7 +206,7 @@ if(window.innerWidth>768){
                 renderer.render(scene,camera);
                 controls.update()
             }
-            window.animate = animate()
+           
             window.hasLoaded = true
            
             
