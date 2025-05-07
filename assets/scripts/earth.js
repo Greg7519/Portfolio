@@ -6,6 +6,24 @@ import getStarfield from './3dSrc/getStarfield.js'
 import {getFresnelMat} from './3dSrc/getFresnelMat.js'
 if(window.innerWidth>768){
     window.drawEarth = async function drawEarth(){
+       
+        // function addStar(){
+        //     const geometry = new THREE.SphereGeometry(0.15,10,10)
+        //     const material = new THREE.MeshStandardMaterial({color:0xffffff})
+        //     const star = new THREE.Mesh(geometry,material)
+        //     // missing {}
+        //     const [x,y,z] = Array(3).fill().map(()=>THREE.MathUtils.randFloatSpread(-200))
+        //     star.position.set(x,y,z)
+        //     scene.add(star);
+        // }
+        // Array(400).fill().forEach(()=>addStar())
+        // const gridHelper = new THREE.GridHelper(200,50)
+        // const pointLight = new THREE.PointLight(0xffffff)
+        // pointLight.position.set(5,5,5)
+        // const pointLightHelper = new THREE.PointLightHelper(pointLight)
+        // scene.add(gridHelper)
+        // scene.add(pointLight)
+        var LmG = new THREE.LoadingManager()
         const bgSelector = document.getElementById("startOfPage");
         const w = window.innerWidth;
         const h = window.innerHeight + window.innerHeight/100;
@@ -70,10 +88,10 @@ if(window.innerWidth>768){
         var textMesh;
         fontLoader.load( '/assets/fonts/Anton_Regular.json', function ( font ) {
         
-        	const geometry = new TextGeometry( 'Welcome to my page', {
-        		font: font,
+            const geometry = new TextGeometry( 'Welcome to my page', {
+                font: font,
                 
-        		size:0.1,
+                size:0.1,
                
                 depth:0.01,
                 curveSegments:12,
@@ -85,8 +103,8 @@ if(window.innerWidth>768){
                 bevelSize: 0,
                 // bevelOffset: 0,
                 bevelSegments: 12
-        		
-        	} );
+                
+            } );
             const textMaterial =  [new THREE.MeshStandardMaterial({color:0xfe9600}),new THREE.MeshStandardMaterial({color:0xfe9600 })]
            textMesh= new THREE.Mesh(geometry,
                 textMaterial
@@ -111,6 +129,9 @@ if(window.innerWidth>768){
         } );
         var moonGeo = new THREE.IcosahedronGeometry(0.16,12);
         var moonMat = new THREE.MeshStandardMaterial({map:loader.load("/assets/images/moonmap1k.jpg")});
+        loader.onload= ()=>{
+            window.hasLoaded = true
+        }
         const moon = new THREE.Mesh(moonGeo,moonMat)
         moon.position.z= 1.35
         const moonObj = new THREE.Object3D();
@@ -134,73 +155,6 @@ if(window.innerWidth>768){
         glowMesh.scale.setScalar(0);
         const stars = getStarfield({numStars:2000})
         scene.add(stars)
-        // function addStar(){
-        //     const geometry = new THREE.SphereGeometry(0.15,10,10)
-        //     const material = new THREE.MeshStandardMaterial({color:0xffffff})
-        //     const star = new THREE.Mesh(geometry,material)
-        //     // missing {}
-        //     const [x,y,z] = Array(3).fill().map(()=>THREE.MathUtils.randFloatSpread(-200))
-        //     star.position.set(x,y,z)
-        //     scene.add(star);
-        // }
-        // Array(400).fill().forEach(()=>addStar())
-        // const gridHelper = new THREE.GridHelper(200,50)
-        // const pointLight = new THREE.PointLight(0xffffff)
-        // pointLight.position.set(5,5,5)
-        // const pointLightHelper = new THREE.PointLightHelper(pointLight)
-        // scene.add(gridHelper)
-        // scene.add(pointLight)
-        
-        function animate(t=0){
-            requestAnimationFrame(animate)
-            mesh.rotation.y += -0.002
-            lightsMesh.rotation.y += -0.002
-            cloudsMesh.rotation.y+=-0.002
-            glowMesh.rotation.y+=-0.002
-            moonObj.rotateY(0.005)
-           
-            try{
-                // scene.getObjectByName("textCont").rotateX(0.002)
-                scene.getObjectByName("textCont").rotateY(-0.002)
-                
-           
-
-            }
-            catch{
-                console.log("Not found")
-            }
-           
-            
-                if(mesh.scale.x <0.55){
-                    if(mesh.scale.x == 0.54){
-                        cloudsMesh.scale.addScalar(0.02)
-                        
-                        
-                    }
-                    const Lmang = new THREE.LoadingManager(()=>{
-                        window.hasLoaded = true
-                    })
-                    
-                    mesh.scale.addScalar(0.01)
-                    glowMesh.scale.addScalar(0.01)
-                    lightsMesh.scale.addScalar(0.01)
-                    cloudsMesh.scale.addScalar(0.01)
-                }
-        
-            
-          
-            
-            
-            renderer.render(scene,camera);
-            controls.update()
-        }
-        window.animate = animate()
-       
-        animate()
-       
-        
-        
-      
         function onWindowResize(){
             camera.aspect =window.innerWidth/window.innerHeight;
             camera.updateProjectionMatrix()
@@ -208,6 +162,62 @@ if(window.innerWidth>768){
             
         }
         window.addEventListener('resize', onWindowResize,false)
+        loader.load(null,()=>{
+            animate()
+        })
+            function animate(t=0){
+                requestAnimationFrame(animate)
+                mesh.rotation.y += -0.002
+                lightsMesh.rotation.y += -0.002
+                cloudsMesh.rotation.y+=-0.002
+                glowMesh.rotation.y+=-0.002
+                moonObj.rotateY(0.005)
+               
+                try{
+                    // scene.getObjectByName("textCont").rotateX(0.002)
+                    scene.getObjectByName("textCont").rotateY(-0.002)
+                    
+               
+    
+                }
+                catch{
+                    console.log("Not found")
+                }
+               
+                
+                    if(mesh.scale.x <0.55){
+                        if(mesh.scale.x == 0.54){
+                            cloudsMesh.scale.addScalar(0.02)
+                            
+                            
+                        }
+                        
+                        
+                        mesh.scale.addScalar(0.01)
+                        glowMesh.scale.addScalar(0.01)
+                        lightsMesh.scale.addScalar(0.01)
+                        cloudsMesh.scale.addScalar(0.01)
+                    }
+            
+                
+              
+                
+                
+                renderer.render(scene,camera);
+                controls.update()
+            }
+            window.animate = animate()
+            window.hasLoaded = true
+           
+            
+        
+      
+        
+       
+        
+        
+      
+       
     
     }
 }
