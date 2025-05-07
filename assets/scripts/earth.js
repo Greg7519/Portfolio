@@ -174,9 +174,13 @@ if(window.innerWidth>768){
                 if(mesh.scale.x <0.55){
                     if(mesh.scale.x == 0.54){
                         cloudsMesh.scale.addScalar(0.02)
-                        window.hasLoaded = true
+                        
                         
                     }
+                    const Lmang = new THREE.LoadingManager(()=>{
+                        window.hasLoaded = true
+                    })
+                    
                     mesh.scale.addScalar(0.01)
                     glowMesh.scale.addScalar(0.01)
                     lightsMesh.scale.addScalar(0.01)
