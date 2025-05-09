@@ -5,7 +5,7 @@ console.log(windowLoc);
 if(windowLoc.includes("about")){
     setTimeout(async()=>{
      
-        
+       
        await typewriter("Software engineer, Passionate about technology", document.getElementById("headerEng"),"#ff4400");
             
            
@@ -43,7 +43,8 @@ if(windowLoc.includes("nebrion")){
      },1250)
 
 }
-if(windowLoc == "index.html" || windowLoc == ""){
+if((windowLoc == "index.html" || windowLoc == "" )&& window.innerWidth<=768){
+    
     setTimeout(async()=>{
      
           

@@ -52,7 +52,7 @@ if(window.innerWidth>768){
             blending: THREE.AdditiveBlending
         })
         const clouds = new THREE.MeshStandardMaterial({
-            opacity:0.2,
+            opacity:0.3,
             alphaMap:loader.load("/assets/images/earthcloudmaptrans.jpg"),
             blending:THREE.AdditiveBlending,
             // alphaMap: loader.load("/assets/images/earthcloudmaptrans.jpg")
