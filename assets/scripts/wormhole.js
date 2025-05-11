@@ -24,10 +24,10 @@ window.drawWormhole = async function drawWormhole(){
 
     scene.add(hemiLight)
     scene.fog = fog
-    const tubeGeo = new THREE.TubeGeometry(spline,222,0.65,16)
+    const tubeGeo = new THREE.TubeGeometry(spline,222,0.65,16,true)
 
     //create edges geometry
-    const edges = new THREE.EdgesGeometry(tubeGeo,0.2)
+    const edges = new THREE.EdgesGeometry(tubeGeo,0.02)
     const lineMat = new THREE.LineBasicMaterial({color:0x002f94})
     const numBoxes = 55;
     const size = 0.075;
