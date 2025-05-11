@@ -138,6 +138,12 @@ body,html{
         align-items: center;
         
     }
+    .bgImgCont{
+        height:200vh;
+    }
+     #bgImg{
+        height: 200vh;
+    }
     .gregImg {
         margin-top: 20%;
         display: flex;
@@ -184,6 +190,12 @@ body,html{
         align-items: center;
        
         
+    }
+    #bgImg{
+        height: 150vh;
+    }
+    .bgImgCont{
+        height:150vh;
     }
     .logoImg{
         width:30vw;
