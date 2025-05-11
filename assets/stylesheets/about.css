@@ -138,6 +138,9 @@ body,html{
         align-items: center;
         
     }
+    canvas{
+        height: 200vh;
+    }
     .bgImgCont{
         height:200vh;
     }

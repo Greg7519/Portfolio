@@ -15,7 +15,12 @@ const fog = new THREE.FogExp2(0x000000,0.3)
 renderer.setSize(window.innerWidth,window.innerHeight);
 const cont = document.getElementById("bgImg")
 cont.appendChild(renderer.domElement)
-
+if(window.innerWidth<768){
+    renderer.domElement.style.height = "150vh"
+}
+if(window.innerWidth<600){
+     renderer.domElement.style.height = "200vh"
+}
 
 const controls = new OrbitControls(camera,renderer.domElement)
 window.drawWormhole = async function drawWormhole(){
