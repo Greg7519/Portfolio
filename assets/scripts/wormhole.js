@@ -15,15 +15,12 @@ const fog = new THREE.FogExp2(0x000000,0.3)
 renderer.setSize(window.innerWidth,window.innerHeight);
 const cont = document.getElementById("bgImg")
 cont.appendChild(renderer.domElement)
-if(window.innerWidth<768){
-    renderer.domElement.style.height = "150vh"
-}
-if(window.innerWidth<600){
-     renderer.domElement.style.height = "200vh"
-}
+
 
 const controls = new OrbitControls(camera,renderer.domElement)
-window.drawWormhole = async function drawWormhole(){
+if(window.innerWidth>768){
+    renderer.domElement.style.height = "150vh"
+    window.drawWormhole = async function drawWormhole(){
         const hemiLight = new THREE.HemisphereLight(0xffffff,0x444444)
     const points = spline.getPoints(100)
     const geometry = new THREE.BufferGeometry().setFromPoints(points)
@@ -110,3 +107,5 @@ window.drawWormhole = async function drawWormhole(){
     // composer.addPass(bloomPass)
 
 
+
+}

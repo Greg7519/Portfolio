@@ -37,24 +37,24 @@ document.body.style.overflowY = 'hidden';
                                
                         }
                         else if(windowLoc.includes("about")){
-                                drawWormhole().then(async()=>{
-                                     
-                                               
-                                               
-                                                        document.body.style.overflowY = 'visible';
-                                                       
-                                                      
-                                                
-                                                        
-                                                
-                                               
-                                               
-                                                
-                                              
-                                                
-                                               
+                                if(window.innerWidth>768){
+                                         drawWormhole().then(async()=>{
+                                                document.body.style.overflowY = 'visible';
                                                 
                                         })
+                                }
+                                else{
+                                        document.getElementById("bgImgAbout").style.display = "block"
+                                        document.body.style.overflowY = 'visible';
+                                        document.getElementsByClassName("preloader")[0].classList.add(
+                                                                                        "goUp"
+                                                                                );
+                                        setTimeout(()=>{
+                                        document.body.style.overflowY = 'visible';
+                                        document.getElementsByClassName("preloader")[0].style.display = "none";
+                                        },1000)       
+                                }      
+                               
                         }
                         else{
                                 this.document.getElementsByClassName("preloader")[0].classList.add(
