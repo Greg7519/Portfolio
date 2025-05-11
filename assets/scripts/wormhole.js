@@ -33,8 +33,16 @@ window.drawWormhole = async function drawWormhole(){
     const size = 0.075;
     const boxGeo = new THREE.BoxGeometry(size,size,size);
     const boxMat = new THREE.MeshBasicMaterial({color:0xffffff})
+    
+    function onWindowResize(){
+            camera.aspect =window.innerWidth/window.innerHeight;
+            camera.updateProjectionMatrix()
+            renderer.setSize(window.innerWidth, window.innerHeight)
+            
+    }
+    window.addEventListener('resize', onWindowResize,false)
     const stars = getStarfield({numStars:2000})
-            scene.add(stars)
+    scene.add(stars)
 
     for(let i=0; i<=numBoxes;i++){
         const box = new THREE.Mesh(boxGeo,boxMat)
@@ -69,6 +77,7 @@ window.drawWormhole = async function drawWormhole(){
     }
     function animate(t=0){
         updateCamera(t)
+        
         renderer.render(scene,camera)
         document.body.style.overflowY = 'visible';
         document.getElementsByClassName("preloader")[0].classList.add(
