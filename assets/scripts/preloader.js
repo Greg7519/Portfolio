@@ -36,6 +36,26 @@ document.body.style.overflowY = 'hidden';
                                 }
                                
                         }
+                        else if(windowLoc.includes("about")){
+                                drawWormhole().then(async()=>{
+                                     
+                                               
+                                               
+                                                        document.body.style.overflowY = 'visible';
+                                                       
+                                                      
+                                                
+                                                        
+                                                
+                                               
+                                               
+                                                
+                                              
+                                                
+                                               
+                                                
+                                        })
+                        }
                         else{
                                 this.document.getElementsByClassName("preloader")[0].classList.add(
                                         "goUp"

@@ -13,7 +13,7 @@ if(windowLoc.includes("about")){
            
            
        
-    },1250)
+    },1750)
 }
 if(windowLoc.includes("chartgen")){
     setTimeout(async()=>{

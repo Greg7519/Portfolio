@@ -11,11 +11,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         </style>
+   
     <link rel="stylesheet" href="/assets/stylesheets/index.css">
     <link rel="stylesheet" href="/assets/stylesheets/contactForm.css">
     <link rel="stylesheet" href="/assets/stylesheets/about.css">
     <script defer src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"> </script>
-    
+     <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.175.0/examples/jsm/"
+          }
+        }
+    </script>
     
 </head>
 <body>
@@ -58,11 +66,7 @@
       
         <div class="logoCont centerRow " >
             <div class="bgImgCont" >
-                <svg id="bgImgAbout" preserveAspectRatio = "none"viewBox="0 0 1920 1080" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                    <rect x="0" y="0" width="1920" height="1080" fill="#002233"></rect>
-                    <path id="bg1" d="M0 915L45.7 917.2C91.3 919.3 182.7 923.7 274.2 917.8C365.7 912 457.3 896 548.8 875.2C640.3 854.3 731.7 828.7 823 799.5C914.3 770.3 1005.7 737.7 1097 747.7C1188.3 757.7 1279.7 810.3 1371.2 816.7C1462.7 823 1554.3 783 1645.8 770.5C1737.3 758 1828.7 773 1874.3 780.5L1920 788L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter"></path>
-                    <path id="bg2" d="M0 771L45.7 779.3C91.3 787.7 182.7 804.3 274.2 820.2C365.7 836 457.3 851 548.8 861.7C640.3 872.3 731.7 878.7 823 880.7C914.3 882.7 1005.7 880.3 1097 886.3C1188.3 892.3 1279.7 906.7 1371.2 896.7C1462.7 886.7 1554.3 852.3 1645.8 831.2C1737.3 810 1828.7 802 1874.3 798L1920 794L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#ffffff" stroke-linecap="round" stroke-linejoin="miter"></path>
-                </svg>
+                <div id="bgImg"></div>
             </div>
             <a href="https://github.com/Greg7519">
                 <div class="gregImg hidden rightAnim">
@@ -133,10 +137,9 @@
       
       
         <script src="https://kit.fontawesome.com/7ca439eefa.js" crossorigin="anonymous"></script>
-       
+        <script type="module" src="/assets/scripts/wormhole.js"></script>
         <script  defer src="/assets/scripts/typewrite.js"></script>
         <script  src="/assets/scripts/textAnim.js"></script>
-    
         <script src="/assets/scripts/preloader.js"></script> 
         <script src="/assets/scripts/onScroll.js"></script>
         <script src="/assets/scripts/handleChanges.js"></script>
