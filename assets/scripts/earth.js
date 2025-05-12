@@ -179,7 +179,7 @@ if(window.innerWidth>768){
                 requestAnimationFrame(animate)
                 mesh.rotation.y += -0.002
                 lightsMesh.rotation.y += -0.002
-                cloudsMesh.rotation.y+=-0.003
+                cloudsMesh.rotation.y+=-0.002
                 glowMesh.rotation.y+=-0.002
                 moonObj.rotateY(0.005)
                
