@@ -130,6 +130,7 @@ if(window.innerWidth>768){
                 
                 document.body.style.overflowY = 'visible';
                 document.getElementsByClassName("preloader")[0].style.display = "none";
+                document.body.style.overflowY = 'visible';
             },1000)
             animate()
             // textMesh.rotation.y = -0.5;
