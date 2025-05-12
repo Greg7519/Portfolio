@@ -140,10 +140,10 @@
             <label for="email">
 
             </label>
-            <input id="fname" type="text" placeholder="Your email:">
+            <input id="email" type="text" placeholder="Your email:">
             <label for="subject"></label>
             <textarea id="subject" type="text" placeholder="Your message(You can also contact at greg.angeloppulos@outlook.com):" style="min-height: 200px;"></textarea>
-            <button class=" visitBtn submitBtn">
+            <button class=" visitBtn submitBtn" id="submitBtn">
                <span> Submit</span>
             </button>
             <div id="backCont">
@@ -171,6 +171,18 @@
         </div>
     </div>
     <script src="/assets/scripts/typewrite.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script src="/assets/scripts/email.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "2Zqc8XaDFypSN0sAq",
+            });
+        })();
+        </script>
+  
     <script src="/assets/scripts/preloader.js"></script> 
     <script src="/assets/scripts/svgAnim.js"></script> 
     
