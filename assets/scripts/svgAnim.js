@@ -12,7 +12,7 @@ function animateSvg(id1, id2, dur, restr){
         
     },900)
     setTimeout(()=>{
-        animateSvg("#bg11", "#bg21", 3000,false);
+        animateSvg(".bg11", ".bg21", 3000,false);
         
     },900)
         
