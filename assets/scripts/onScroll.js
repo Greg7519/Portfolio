@@ -29,6 +29,19 @@ if(windowLoc.includes("chartgen")){
      },1250)
 
 }
+if(windowLoc.includes("organify")){
+     setTimeout(async()=>{
+     
+        
+        await typewriter("Organify:Organize your work", document.getElementById("mainHeader"),"#ff4400");
+             
+            
+           
+            
+            
+        
+     },1250)
+}
 if(windowLoc.includes("nebrion")){
     setTimeout(async()=>{
      
