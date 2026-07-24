@@ -2,7 +2,6 @@
 
 Welcome to the repository for my personal portfolio website! This site showcases my projects, technical skills, and creative work with interactive animations and custom 3D graphics.
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview+Image) <!-- Optional: Replace with a screenshot or GIF of your site -->
 
 ✨ **Live Demo:** [projectionwork.netlify.app](https://projectionwork.netlify.app/)
 
