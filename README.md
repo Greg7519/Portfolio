@@ -1,11 +1,29 @@
-My personal portfolio page
-Live:
-https://projectionwork.netlify.app/
+# 🚀 Personal Portfolio Website
 
-Built using javascript, html, css. 
-Added self made animations utilizing svgs as well as 3d animation using 3js
-3d animation inspired by:
-https://www.youtube.com/watch?v=UMqNHi1GDAE
-Email form working using emailJS
+Welcome to the repository for my personal portfolio website! This site showcases my projects, technical skills, and creative work with interactive animations and custom 3D graphics.
+
+![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview+Image) <!-- Optional: Replace with a screenshot or GIF of your site -->
+
+✨ **Live Demo:** [projectionwork.netlify.app](https://projectionwork.netlify.app/)
+
+---
+
+## 🌟 Highlights & Key Features
+
+* 🎨 **Interactive 3D Graphics:** Features immersive 3D background/interactive elements built with Three.js (inspired by [DesignCourse's Three.js tutorial](https://www.youtube.com/watch?v=UMqNHi1GDAE)).
+* ⚡ **Custom SVG Animations:** Custom hand-crafted SVG animations created directly in code for a unique visual experience.
+* 📬 **Functional Contact Form:** Seamless client-side email integration powered by EmailJS.
+* 📱 **Fully Responsive:** Optimized for a smooth experience across desktop, tablet, and mobile displays.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Structure:** HTML5 🏗️
+* **Styling:** CSS3 (Flexbox/Grid, Animations) 🎨
+* **Scripting & Interactivity:** JavaScript (ES6+) ⚡
+* **3D Graphics:** Three.js 🌐
+* **Email Service:** EmailJS 📧
+* **Hosting & Deployment:** Netlify 🚀
 
 
